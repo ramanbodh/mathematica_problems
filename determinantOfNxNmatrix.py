@@ -23,8 +23,11 @@ def determinant(arrayX):
                 continue
             q+=1
         print("--------------\n")
-        result+=(determinant(newarry))*mul
-        print(f"{result}")
+        if (i+1)%2==0:
+            result-=(determinant(newarry))*mul
+        else:
+            result+=(determinant(newarry))*mul
+        print(f"mul={mul} result={result}")
 
     return result
 
