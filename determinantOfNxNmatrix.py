@@ -4,7 +4,7 @@ def determinant(arrayX):
     if len(arrayX[0])==2:
         sum=((arrayX[0][0]*arrayX[1][1])-(arrayX[1][0]*arrayX[0][1]))
         return sum
-    newarry=[]
+    newarry=[[0 for _ in range(len(arrayX)-1)] for _ in range(len(arrayX)-1)]
     mul=0
     result=0
     for i in range(len(arrayX)):
@@ -17,9 +17,14 @@ def determinant(arrayX):
                 if j==0 or i==t:
                      continue 
                 newarry[q][p]=arrayX[t][j]
+                print(f"new array[{q}][{p}]={newarry[q][p]}")
                 p+=1
-            q+1
+            if t==i:
+                continue
+            q+=1
+        print("--------------\n")
         result+=(determinant(newarry))*mul
+        print(f"{result}")
 
     return result
 
