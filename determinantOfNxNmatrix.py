@@ -36,6 +36,7 @@ def determinant(arrayX):
 
     return result
 
+#test array
 arraya=[
     [1, 2, 3, 4],
     [5, 6, 7, 8],
@@ -44,6 +45,8 @@ arraya=[
 ]
 result=determinant(arraya)
 print(result)
+
+#test for  1X1 matrix determinant
 a=[[5]]
 print(determinant(a))
         
